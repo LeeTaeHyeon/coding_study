@@ -9,6 +9,7 @@ Runtime: 95 ms, faster than 68.83% of Python online submissions for Top K Freque
 Memory Usage: 16.8 MB, less than 55.40% of Python online submissions for Top K Frequent Elements.
 """
 from collections import defaultdict
+from collections import Counter
 
 
 class Solution(object):
@@ -30,3 +31,14 @@ class Solution(object):
 
 sol = Solution()
 print(sol.topKFrequent([1, 1, 1, 2, 2, 3, 5, 5, 5, 5, 5, 5], 2))
+
+
+class Solution2(object):
+    def topKFrequent(self, nums, k):
+        counter = Counter(nums)
+
+        return [counter.most_common(k)[i][0] for i in range(k)]
+
+
+sol2 = Solution2()
+print(sol2.topKFrequent([1, 1, 1, 2, 2, 3, 5, 5, 5, 5, 5, 5], 2))

@@ -3,6 +3,10 @@
 
 요구사항
 1. 빈번하게 나온 숫자들 중 k 번까지 출력
+
+결과
+Runtime: 95 ms, faster than 68.83% of Python online submissions for Top K Frequent Elements.
+Memory Usage: 16.8 MB, less than 55.40% of Python online submissions for Top K Frequent Elements.
 """
 from collections import defaultdict
 
